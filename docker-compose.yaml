@@ -18,9 +18,13 @@ services:
       - "docs"
       - "functions"
   analytics:
-      image: matatmo
+      image: matomo
+      links:
+        - "mysql"
   docs:
       image: nextcloud
+      links:
+        - "mysql"
   functions:
       image: iron/functions
   mysql:
