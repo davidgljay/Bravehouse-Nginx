@@ -5,8 +5,6 @@ services:
   nginx:
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
-    environment:
-      - CERTBOT_EMAIL
     env_file:
       - ./nginx-certbot.env
     ports:
@@ -27,6 +25,8 @@ services:
       image: iron/functions
   mysql:
       image: mysql
+      env_file:
+        - ./mysql.env
 
 volumes:
   nginx_secrets:

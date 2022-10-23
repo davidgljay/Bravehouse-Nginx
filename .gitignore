@@ -1,2 +1,3 @@
 /nginx-secrets
 nginx-certbot.env
+mysql.env
