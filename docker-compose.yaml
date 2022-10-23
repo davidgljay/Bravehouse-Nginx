@@ -16,13 +16,8 @@ services:
     links:
       - "analytics"
       - "docs"
-      - "functions"
   analytics:
       image: matomo
-      links:
-        - "mysql"
-  docs:
-      image: nextcloud
       links:
         - "mysql"
   functions:
