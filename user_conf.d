@@ -24,7 +24,7 @@ server {
     ssl_ciphers "EECDH+ECDSA+AESGCM:EECDH+aRSA+AESGCM:EECDH+ECDSA+SHA384:EECDH+ECDSA+SHA256:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:DHE+AESGCM:DHE:!RSA!aNULL:!eNULL:!LOW:!RC4:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS:!CAMELLIA:!SEED";
 
     location / {
-        proxy_pass http://172.18.0.2;
+        proxy_pass http://analytics;
     }
 
     #error_page  404              /404.html;
@@ -62,7 +62,7 @@ server {
     server_name docs.relationalitylab.org;
 
     location / {
-     proxy_pass http://172.18.0.5;
+     proxy_pass http://docs;
     }
 
     error_page  404              /404.html;
