@@ -26,6 +26,11 @@ services:
       image: mysql
       env_file:
         - ./mysql.env
+  mongo:
+      image: mongo
+      restart: always
+      env_file:
+        - ./mysql.env
 
 volumes:
   nginx_secrets:
